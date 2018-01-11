@@ -1,10 +1,10 @@
 import React, { Component} from 'react';
-class global extends Component{
+class Global extends Component{
   render()
   {
     return(
-      <div>the g]lobal appl</div>
+      <div>"the appl"</div>
     )
   }
 }
-export default global;
+export default Global;

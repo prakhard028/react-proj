@@ -1,8 +1,8 @@
 const React = require('react');
 const ReactDom = require('react-dom');
-const global = require('./components.global');
+const Global = require('./components/global');
 
 ReactDom.render(
-  <global/>,
+  <Global/>,
   document.getElementById('app')
 )
