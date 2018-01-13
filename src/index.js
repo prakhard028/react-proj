@@ -1,8 +1,8 @@
-const React = require('react');
-const ReactDom = require('react-dom');
-const Global = require('./components/global');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Global from './components/global';
 
-ReactDom.render(
+ReactDOM.render(
   <Global/>,
   document.getElementById('app')
 )
