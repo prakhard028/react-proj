@@ -1,8 +1,20 @@
 import React,{ Component } from 'react';
-class Global extends Component {
+export default class Global extends Component {
+
+  constructor(props){
+    super(props);
+    this.state ={
+      text:''
+    };
+  }
 search(){
   console.log('search');
 }
+handleChange(event) {
+ var text = event.target.value;
+ console.log(text);
+ this.setState({text: event.target.value});
+  }
 
 
   render()
@@ -11,11 +23,13 @@ search(){
       <form>
       <div className="Global">
      <label htmlFor="exampleInputPassword1">BOOK</label>
-     <input type="text" class="form-control" id="exampleInputPassword" placeholder="BOOK NAME"></input>
-   </div>
-   <button type="button" class="btn btn-primary" onclick=search()>Search</button>
+     <input type="text" className="form-control" id="exampleInputPassword" placeholder="BOOK NAME" text={this.state.text}
+      onChange={this.handleChange}></input>
+
+
+   <button type="button" className="btn btn-primary" onClick={this.search}>Search</button>
+      </div>
      </form>
     )
   }
 }
-export default Global;
